@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttprequest </title>
+    <script type="text/Jvascript">
+        function loadtext(){
+            var xhr=new XMLHttprequest();
+            xhr class=onreadystatechage = function() {
+
+                if(xhr.readyState == 4)
+                {
+                    if(xhr.readyState == 200)
+                    {
+                        document.getElementById("show").innerHTML = xhr.requestText;
+                    }
+
+                }
+            };
+            xhr.open("get","req.txt",true);
+            xhr.send();
+        }
+</head>
+<body>
+    <div id="show"></div>
+    <Button onclick="loadtxt()"> Click Here </button>
+</body>
+</html>
