@@ -4,14 +4,16 @@
     <title> XMLHttprequest </title>
     <script type="text/Javascript">
         function loadtext(){
+        
             var xhr=new XMLHttprequest();
-            xhr class=onreadystatechage = function() {
+            
+            xhr.onreadystatechange = function() {
 
                 if(xhr.readyState == 4)
                 {
-                    if(xhr.readyState == 200)
+                    if(xhr.readyStatus == 200)
                     {
-                        document.getElementById("show").innerHTML = xhr.requestText;
+                        document.getElementById("show").innerHTML = xhr.responseText;
                     }
 
                 }
